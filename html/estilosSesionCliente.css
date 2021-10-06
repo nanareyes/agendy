@@ -1,0 +1,100 @@
+.imagen-producto {
+    max-width: 200px;
+    max-height: 100%;
+    border-radius: 30px;
+    padding-right: 10px;
+}
+/*.imagen-producto {
+    max-width: 18000px;
+    max-height: 600%;
+    border-radius: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}*/
+
+.fila-productos {
+    display: flex !important;
+}
+
+.tarjeta-producto {
+    padding: 10px;
+    border: solid;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px #ccc;
+    max-width: 220px !important;
+    text-align: center;
+}
+
+
+.nombre-producto {
+    text-align: center;
+    color: #3e3e3e;
+}
+
+.precio-producto {
+    text-align: center;
+    color: #3e3e3e;
+    font-family: cursive;
+}
+
+.descripcion-producto {
+    max-width: 200px;
+    text-align: justify;
+}
+
+.estilo-icono {
+    font-size: 24px;
+    border-style: outset;
+    background-color: #F5B7B1;
+}
+
+.div-icono {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.div-galeria {
+    padding-top: 30px;
+}
+
+.tarjeta-total {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    border: solid;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+@media (max-width: 575.9px) {
+    .imagen-producto {
+        max-width: 500px !important;
+        max-height: 100% !important;
+        border-radius: 30px !important;
+        
+    }
+
+    .tarjeta-producto {
+        padding: 5px !important;
+        border: solid !important;
+        margin: 10px !important;
+        border-radius: 30px !important;
+        box-shadow: 10px 10px 10px #ccc !important;
+        max-width: 340px !important;
+    }
+
+    .descripcion-producto {
+        max-width: 400px;
+        text-align: justify;
+        font-size: 25px;
+    }
+
+    .site-title{
+        padding-top: 60px;
+    }
+ }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servicios </title>
+    <link rel="icon" href="images/uña.png" type="image/png" />
+    <script src="/javascripts/application.js"></script>
+    <script src="/javascripts/myScript1.js"></script>
+    <script src="https://www.w3schools.com/js/myScript1.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="estilosSesionCliente.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <script src="Scripts/services.js"></script>
+    <div class="content">
+
+        <div class="header" id="#menu">
+            <div class="row menubar">
+                <div class="col-6 menu-logo mt-2">
+                    <img src="images/LOGO 1.svg">
+                    <img src="images/logo.png">
+                </div>
+                <div class="col-6 menu-links">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active mx-5" aria-current="page" href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mx-4" href="portafolioServicios.html">Servicios</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mx-5" href="index.html">Noticias</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mx-4" href="index.html">Equipo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container div-galeria" id="galeria">
+            <div class="row fila-productos">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 tarjeta-producto">
+                    <img class="imagen-producto" style="width: 150px; height: 100px;" src="images/semipermanente.jpg">
+                    <h1 class="nombre-producto">Semipermanente</h1>
+                    <h3 class="precio-producto">$35.000</h3>
+                    <div class="descripcion-producto">
+                        <p>Diferentes decorados y colores</p>
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down estilo-icono"
+                            onclick="agregarAlCarrito('Maquillaje semipermanente', 35000)"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 tarjeta-producto">
+                    <img class="imagen-producto" style="width: 150px; height: 100px;" src="images\uñasacrilicas.jpg">
+                    <h1 class="nombre-producto">Acrílicas</h1>
+                    <h3 class="precio-producto">$80.000</h3>
+                    <div class="descripcion-producto">
+                        <p>Elige tu decorado</p>
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down estilo-icono"
+                            onclick="agregarAlCarrito('Uñas Acrílicas', 80000)"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 tarjeta-producto">
+                    <img class="imagen-producto" style="width: 150px; height: 100px;" src="images\uñasengel.jpg">
+                    <h1 class="nombre-producto">En gel</h1>
+                    <h3 class="precio-producto">$60.000</h3>
+                    <div class="descripcion-producto">
+                        <p>Elige el color</p>
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down estilo-icono"
+                            onclick="agregarAlCarrito('Uñas en Gel', 60000)"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 tarjeta-producto">
+                    <img class="imagen-producto" style="width: 150px; height: 100px;" src="images\manicure.jpg">
+                    <h1 class="nombre-producto">Manicure</h1>
+                    <h3 class="precio-producto">$15.000</h3>
+                    <div class="descripcion-producto">
+                        <p>Elige tu decorado</p>
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down estilo-icono"
+                            onclick="agregarAlCarrito('Manicure', 15000)"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 tarjeta-producto">
+                    <img class="imagen-producto" style="width: 150px; height: 100px;" src="images\pedicure.jpg">
+                    <h1 class="nombre-producto">Pedicure</h1>
+                    <h3 class="precio-producto">$15.000</h3>
+                    <div class="descripcion-producto">
+                        <p>Elige el corte y decorado</p>
+                    </div>
+                    <div id="icono" class="div-icono">
+                        <i class="las la-cart-arrow-down estilo-icono"
+                            onclick="agregarAlCarrito('pedicure', 15000)"></i>
+                        <p><b>Agregar al carrito</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-total">
+                <h2>TOTAL</h2>
+                <h2 id="total_carrito">$</h2>
+            </div>
+
+        </div>
+        <br> <br>
+        <hr>
+        <footer>
+            <div class="container-fooder-all">
+                <div class="container-body">
+
+                    <div class="column1">
+                        <h1>Mas Informacion de la Compañia</h1>
+                        <p> El Centro de estética ANGENDY NAILS,
+                            ofrece un espacio de armonía y confort,
+                            atendido por personal altamente calificado,
+                            ofreciendo el embellecimiento de uñas con diferentes
+                            tipos de diseños, colores, texturas y técnicas.
+                        </p><br>
+
+                        <h3>Integrantes Grupo 4</h3><br>
+                        <li>Yenny Natacha Libreros Montes</li>
+                        <li>Diana Carolina Reyes Mantillla</li>
+                        <li>Irma Zoraida Cardenas Villarraga</li>
+                        <li>Camila Acosta Nieto</li>
+                    </div>
+
+                    <div class="column2">
+                        <h1>Redes Sociales</h1>
+
+                        <div class="row">
+                            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg"></a>
+                            <label>Siguenos en Facebook</label>
+
+                        </div>
+
+                        <div class="row">
+                            <a href="https://twitter.com/" target="_blank"><img src="images/twitter.svg"></a>
+                            <label>Siguenos en Twitter</label>
+                        </div>
+
+                        <div class="row">
+                            <a href="https://www.instagram.com/?hl=es" target="_blank"><img
+                                    src="images/instagram.svg"></a>
+                            <label>Siguenos en Instagram</label>
+                        </div>
+
+                        <div class="row">
+                            <a href="https://co.pinterest.com/" target="_blank"><img src="images/printeres.svg"></a>
+                            <label>Siguenos en Instagram</label>
+                        </div>
+                    </div>
+
+                    <div class="column3">
+
+                        <h1> Informacion Contacto</h1>
+
+                        <div class="row2">
+                            <img src="images/direccion.svg">
+                            <label>Aca se coloca la direccion de la empresa</label>
+                        </div>
+
+                        <div class="row2">
+                            <img src="images/movil.svg">
+                            <lu>
+                                <li>+57 320 692 2383</li>
+                                <li>+57 320 748 3074</li>
+                                <li>+57 300 477 7527</li>
+                                <li>+57 319 245 5093</li>
+                            </lu>
+                        </div>
+
+                        <div class="row2">
+                            <img src="images/email.svg">
+                            <label>email@email.com</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-footer2">
+                <div class="footer2">
+                    <div class="copyright">© Todos los derechos reservados |
+                        <a href="https://github.com/nanareyes/Proyecto-Ciclo-3/blob/development/index.html"
+                            target="_blanck">Acceso al Git</a>
+                    </div>
+
+                    <div class="information">
+                        <a href=""> Informacion Compañia |</a>
+                        <a href="">Privacion y Politica |</a>
+                        <a href="">Terminos y condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
