@@ -3,7 +3,7 @@
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="images/pedicure2.jpg" style="height: 470px;" class="img-fluid rounded-start" alt="pedicure">
+                <img src="@/assets/images/pedicure2.jpg" style="height: 470px;" class="img-fluid rounded-start" alt="pedicure">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
