@@ -17,6 +17,9 @@
                             <a class="nav-link" router-link to="/agenda">Agenda</a>
                         </li>
                         </ul>
+                    <div class="back">
+                        <router-link to="/" class="btn btn-action">Salir</router-link>
+                    </div>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Somos Agendy</h5>
@@ -32,78 +35,40 @@
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col h-100">
                             <div class="card">
-                                <img src="images/semipermanente.jpg" class="card-img-top" alt="semipermanente" style="height: 370px;">
+                                <img src="@/assets/images/semipermanente.jpg" class="card-img-top" alt="semipermanente" style="height: 370px;">
                                 <div class="card-body">
-                                    <h5 class="card-title">Maquillaje semipermanente</h5>
-                                    <p class="card-text">La manicura semipermanente es un maquillaje en uñas con esmaltado
-                                        de larga duración, el cual puede ser aplicado en uñas naturales o artificiales..</p>
+                                    <h5 class="card-title">Mi galería de imágenes</h5>
+                                    <p class="card-text">En este espacio podrás incluir todas las imágenes para construir tu galería personalziada de tu portafolio de servicios, los cuales podrán ser vistos por tus clientes.</p>
                                 </div>
-                                <router-link to="/semipermanente" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
+                                <router-link to="/galeria" class="btn btn-action  btn-lg" tabindex="-1" role="button"
+                                        aria-disabled="true">Ingresar</router-link>
                             </div>
                         </div>
                         <div class="col h-100">
                             <div class="card">
-                                <img src="images/uñas.png" class="card-img-top" alt="acrilicas" style="height: 370px;">
+                                <img src="@/assets/images/uñas.png" class="card-img-top" alt="acrilicas" style="height: 370px;">
                                 <div class="card-body">
-                                    <h5 class="card-title">Uñas acrílicas</h5>
-                                    <p class="card-text">Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combinan en una masa, se le da forma a las uñas con un cepillo y luego se seca al aire libre..</p>
+                                    <h5 class="card-title">Mis servicios</h5>
+                                    <p class="card-text">Aquí podras construir el portafolio de servicios, precios, promociones.</p>
                                 </div>
                                 <router-link to="/acrilicas" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
+                                        aria-disabled="true">Ingresar</router-link>
                             </div>
                         </div>
                         <div class="col h-100">
                             <div class="card">
-                                <img src="images/uñas3.png" class="card-img-top" alt="gel" style="height: 370px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Uñas en gel</h5>
-                                    <p class="card-text"> Las uñas en gel por lo general consisten en cepillar capas de esmalte en las uñas
-                                        naturales y se curan con una lámpara UV. Las uñas en gel por lo general...</p>
-                                </div>
-                                <router-link to="/gel" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
-                            </div>
-                        </div>
-                        <div class="col h-100">
-                            <div class="card">
-                                <img src="images/manicure2.jpg" class="card-img-top" alt="manicure">
-                                <div class="card-body">
-                                    <h5 class="card-title">Manicure</h5>
-                                    <p class="card-text">Este decorado a pesar de durar menos no maltrata tanto las capas
-                                        supersificiales de la uña.</p>
-                                </div>
-                                <router-link to="/manicure" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
-                            </div>
-                        </div>
-                        <div class="col h-100">
-                            <div class="card">
-                                <img src="images/pedicure2.jpg" class="card-img-top" alt="pedicure" style="height: 340px;">                            
-                                <div class="card-body">
-                                    <h5 class="card-title">Pedicure</h5>
-                                    <p class="card-text">Tratamiento cosmético superficial de las uñas de los pies. Este
-                                        tratamiento, no trata exclusivamente de las uñas de los pies...</p>
-                                </div>
-                                <router-link to="/pedicure" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
-                            </div>
-                        </div>
-                        <div class="col h-100">
-                            <div class="card">
-                                <img src="images/LOGO-3.jpg" class="card-img-top" alt="calendario">
+                                <img src="@/assets/images/calendar.png" class="card-img-top" alt="gel" style="height: 370px;">
                                 <div class="card-body">
                                     <h5 class="card-title">Agenda</h5>
-                                    <p class="card-text">Luego de elegir el servicio que deseas y el decorado de tu preferencia, elige el día y la hora en que tu deseas agendar tu cita.</p>
+                                    <p class="card-text"> En este espacio podrás configurar tu agenda, para que tus clientes puedan escoger el día y hora del servicio. </p>
                                 </div>
-                                <router-link to="/agenda" class="btn btn-action  btn-lg" tabindex="-1" role="button"
-                                        aria-disabled="true">Ver más</router-link>
+                                <router-link to="/gel" class="btn btn-action  btn-lg" tabindex="-1" role="button"
+                                        aria-disabled="true">Ingresar</router-link>
                             </div>
                         </div>
+                        
                     </div>
-                    <div class="back">
-                        <router-link to="/" class="btn btn-action">Salir</router-link>
-                    </div>
+                
                 </div>
             </div>
     </div>
