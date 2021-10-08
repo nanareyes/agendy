@@ -9,7 +9,7 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col h-100">
                         <div class="card">
-                            <img src="images/uñassemipermanente2.jpg" class="card-img-top" alt="semipermanente">
+                            <img src="@/assets/images/uñassemipermanente2.jpg" class="card-img-top" alt="semipermanente">
                             <div class="card-body">
                                 <h5 class="card-title">Maquillaje semipermanente</h5>
                                 <p class="card-text">La manicura semipermanente es un maquillaje en uñas con esmaltado
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col h-100">
                         <div class="card">
-                            <img src="images/uñas.png" class="card-img-top" alt="acrilicas">
+                            <img src="@/assets/images/uñas.png" class="card-img-top" alt="acrilicas">
                             <div class="card-body">
                                 <h5 class="card-title">Uñas acrílicas</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
@@ -31,7 +31,7 @@
                     </div>
                     <div class="col h-100">
                         <div class="card">
-                            <img src="images/uñas3.png" class="card-img-top" alt="gel">
+                            <img src="@/assets/images/uñas3.png" class="card-img-top" alt="gel">
                             <div class="card-body">
                                 <h5 class="card-title">Uñas en gel</h5>
                                 <p class="card-text"> Las uñas en gel por lo general consisten en cepillar capas de
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col h-100">
                         <div class="card">
-                            <img src="images/manicure2.jpg" class="card-img-top" alt="manicure">
+                            <img src="@/assets/images/manicure2.jpg" class="card-img-top" alt="manicure">
                             <div class="card-body">
                                 <h5 class="card-title">Manicure</h5>
                                 <p class="card-text">Este decorado a pesar de durar menos no maltrata tanto las capas
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col h-100">
                         <div class="card">
-                            <img src="images/pedicure.jpg" class="card-img-top" alt="pedicure">
+                            <img src="@/assets/images/pedicure.jpg" class="card-img-top" alt="pedicure">
                             <div class="card-body">
                                 <h5 class="card-title">Pedicure</h5>
                                 <p class="card-text">Tratamiento cosmético superficial de las uñas de los pies. Este

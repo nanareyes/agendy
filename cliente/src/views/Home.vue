@@ -11,7 +11,7 @@
                 <div class="col">
                   <div class="card h-100">
                     <div class="card-service-image">
-                      <img src="images/registro.ico" class="card-img-top" alt="Registro">
+                      <img src="@/assets/images/registro.jpg" class="card-img-top" alt="Registro">
                     </div>
                   <div class="card-body">
                     <h4 class="card-title">Registro de Usuarios</h4>
@@ -28,7 +28,7 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-service-image">
-                    <img src="images/usuario.ico" class="card-img-top" alt="Login">
+                    <img src="@/assets/images/registro2.jpg" class="card-img-top" alt="Login">
                   </div>
                   <div class="card-body">
                     <h4 class="card-title">Inicio de Sesión</h4>
@@ -44,7 +44,7 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-service-image">
-                    <img src="images/una.png" class="card-img-top" alt="Portafolio">
+                    <img src="@/assets/images/una.png" class="card-img-top" alt="Portafolio">
                   </div>
                   <div class="card-body">
                     <h4 class="card-title">Portafolio de Servicios</h4>
@@ -69,7 +69,7 @@
                 <div class="card-body section-body">
                   <div class="row g-0">
                     <div class="col-md-4 img-news">
-                      <img src="images/new1.jpg" class="img-fluid rounded-start " alt="Noticia 1">
+                      <img src="@/assets/images/new1.jpg" class="img-fluid rounded-start " alt="Noticia 1">
                     </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -88,7 +88,7 @@
               <div class="card-body section-body">
                 <div class="row g-0">
                   <div class="col-md-4 img-news">
-                    <img src="images/new2.jpg" style="height: 230px;" class="img-fluid rounded-start " alt="Noticia 1">
+                    <img src="@/assets/images/new2.jpg" style="height: 230px;" class="img-fluid rounded-start " alt="Noticia 1">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -108,7 +108,7 @@
               <div class="card-body section-body">
                 <div class="row g-0">
                   <div class="col-md-4 img-news">
-                    <img src="images/new3.jpg" style="height: 260px;" class="img-fluid rounded-start " alt="Noticia 1">
+                    <img src="@/assets/images/new3.jpg" style="height: 260px;" class="img-fluid rounded-start " alt="Noticia 1">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -129,7 +129,7 @@
               <div class="card-body section-body">
                 <div class="row g-0">
                   <div class="col-md-4 img-news">
-                    <img src="images/new4.jpg" class="img-fluid rounded-start " alt="Noticia 1">
+                    <img src="@/assets/images/new4.jpg" class="img-fluid rounded-start " alt="Noticia 1">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -151,28 +151,28 @@
         </div>
         <div class="card-group body-team">
           <div class="card mx-2">
-            <div class="team-member-image"><img src="images/photoNana.jpg" alt="Avatar" class="avatar"></div>
+            <div class="team-member-image"><img src="@/assets/images/photoNana.jpg" alt="Avatar" class="avatar"></div>
             <div class="card-body">
               <h5 class="card-title">Diana Carolina Reyes Mantilla</h5>
               <p class="card-text">Especialista en Gerencia Estratégica y profesional Administración y Negocios Internacionales.</p>
             </div>
           </div>
           <div class="card mx-2">
-            <div class="team-member-image"><img src="images/natacha.jpg" alt="Avatar" class="avatar"></div>
+            <div class="team-member-image"><img src="@/assets/images/natacha.jpg" alt="Avatar" class="avatar"></div>
             <div class="card-body">
               <h5 class="card-title">Natacha Libreros</h5>
               <p class="card-text">Economista Y técnico en contabilidad y finanzas.</p>
             </div>
           </div>
           <div class="card mx-2">
-            <div class="team-member-image"><img src="images/irma.jpg" alt="Avatar" class="avatar"></div>
+            <div class="team-member-image"><img src="@/assets/images/irma.jpg" alt="Avatar" class="avatar"></div>
             <div class="card-body">
               <h5 class="card-title">Irma Zoraida Cardenas</h5>
               <p class="card-text">Administradora de empresas especializadas en proyectos. </p>
             </div>
           </div>
           <div class="card mx-2">
-            <div class="team-member-image"><img src="images/photoCamila.jpg" alt="Avatar" class="avatar"></div>
+            <div class="team-member-image"><img src="@/assets/images/photoCamila.jpg" alt="Avatar" class="avatar"></div>
             <div class="card-body">
               <h5 class="card-title">Camila Acosta Nieto</h5>
               <p class="card-text">Estudiante de Estadística.</p>
