@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "5f4c4b5f-3f70-4433-bbb3-ffb1d4bcf51c",
+		"name": "agendyDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "servicios",
+			"item": [
+				{
+					"name": "Consulta servicios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/servicio/615f3c1e38942cb97885fa77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"servicio",
+								"615f3c1e38942cb97885fa77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creación servicios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Mantenimiento acrilico",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Mantenimeinto de acrilico de uñas perfectas",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "50000",
+									"type": "text"
+								},
+								{
+									"key": "imagen",
+									"value": "decorado22.JPG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api//nuevo-servicio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"",
+								"nuevo-servicio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un servicio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/servicio/615f5869c27c4da659ffb3c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"servicio",
+								"615f5869c27c4da659ffb3c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualización servicios",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "precio",
+									"value": "22000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/servicio/615f3c1e38942cb97885fa7d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"servicio",
+								"615f3c1e38942cb97885fa7d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Consultar clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creación clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "identificacion",
+									"value": "42154856",
+									"type": "text"
+								},
+								{
+									"key": "nombres",
+									"value": "Carolina",
+									"type": "text"
+								},
+								{
+									"key": "apellidos",
+									"value": "Serna Reyes",
+									"type": "text"
+								},
+								{
+									"key": "fechaNacimiento",
+									"value": "25/09/2001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "direccion",
+									"value": "calle 44 15-58",
+									"type": "text"
+								},
+								{
+									"key": "ciudad",
+									"value": "Pereira",
+									"type": "text"
+								},
+								{
+									"key": "departamento",
+									"value": "Risaralda",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "3104527896",
+									"type": "text"
+								},
+								{
+									"key": "correoElectronico",
+									"value": "sernap@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "7896",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/nuevo-cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nuevo-cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/cliente/615f403838942cb97885fbce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cliente",
+								"615f403838942cb97885fbce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualización clientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "telefono",
+									"value": "333333333",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cliente/615f5bd23b8c8f90ffd250d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cliente",
+								"615f5bd23b8c8f90ffd250d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estilistas",
+			"item": [
+				{
+					"name": "Consultar estilistas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/estilistas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"estilistas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creación estilista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "identificacion",
+									"value": "42154145",
+									"type": "text"
+								},
+								{
+									"key": "nombres",
+									"value": "Vanesa",
+									"type": "text"
+								},
+								{
+									"key": "apellidos",
+									"value": "Patiño Cardenas",
+									"type": "text"
+								},
+								{
+									"key": "fechaNacimiento",
+									"value": "5/12/1980",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "cr 45 25-05",
+									"type": "text"
+								},
+								{
+									"key": "ciudad",
+									"value": "Pereira",
+									"type": "text"
+								},
+								{
+									"key": "departamento",
+									"value": "Risaralda",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "3557489563",
+									"type": "text"
+								},
+								{
+									"key": "correoElectronico",
+									"value": "patiño@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "9563",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api//nuevo-estilista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"",
+								"nuevo-estilista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un estilista",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/estilista/615f5e43b7da1441f5be764f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"estilista",
+								"615f5e43b7da1441f5be764f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualización estilistas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "direccion",
+									"value": "Cra 25 25-25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/estilista/615f9f9dc5c8371339935dde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"estilista",
+								"615f9f9dc5c8371339935dde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

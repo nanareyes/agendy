@@ -8,9 +8,6 @@ const app = express();
 // Conexión base de datos
 const mongoose = require('mongoose');
 const uri = 'mongodb://localhost:27017/agendyDB';
-
-
-
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 
 // Or using promises
@@ -31,7 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 //     res.send('Hello World!');
 // });
 app.use('/api', require('./routes/nota'));
-
+app.use('/api', require('./routes/servicio'));
+app.use('/api', require('./routes/cliente'));
+app.use('/api', require('./routes/estilista'));
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');
