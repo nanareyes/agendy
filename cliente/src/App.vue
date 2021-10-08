@@ -66,25 +66,25 @@
             <div class="col-1">
               <i class="fab fa-facebook fa-lg"></i>
             </div>
-            <div class="col-11"> <a href="https://facebook.com/" target="_blank"><label>Siguenos en Facebook</label></a></div>
+            <div class="col-11 text-start"> <a href="https://facebook.com/" target="_blank"><label>Siguenos en Facebook</label></a></div>
           </div>
           <div class="row mt-2">
             <div class="col-1">
               <i class="fab fa-twitter fa-lg"></i>
             </div>
-            <div class="col-11"> <a href="https://twitter.com/" target="_blank"><label>Siguenos en Twitter</label></a></div>
+            <div class="col-11 text-start"> <a href="https://twitter.com/" target="_blank"><label>Siguenos en Twitter</label></a></div>
           </div>
           <div class="row mt-2">
             <div class="col-1">
               <i class="fab fa-instagram fa-lg"></i>
             </div>
-            <div class="col-11"> <a href="https://instagram.com/" target="_blank"><label>Siguenos en Instagram</label></a></div>
+            <div class="col-11 text-start"> <a href="https://instagram.com/" target="_blank"><label>Siguenos en Instagram</label></a></div>
           </div>
           <div class="row mt-2">
             <div class="col-1">
               <i class="fab fa-pinterest fa-lg"></i>
             </div>
-            <div class="col-11"> <a href="https://pinterest.com/" target="_blank"><label>Siguenos en Pinterest</label></a></div>
+            <div class="col-11 text-start"> <a href="https://pinterest.com/" target="_blank"><label>Siguenos en Pinterest</label></a></div>
           </div>
         </div>
 
@@ -92,29 +92,23 @@
         <div class="col-3">
           <h5> Informacion Contacto</h5>
           <div class="row">
-            <div class="col-1">
-              <i class="fa-solid fa-house fa-lg"></i>
-            </div>
-            <div class="col-11"> <label>Aca se coloca la direccion de la empresa</label> </div>
+            <div class="col-12 text-start"> <i class="fa-solid fa-house fa-lg mx-3"></i><label>Aca se coloca la direccion de la empresa</label> </div>
           </div>
 
           <div class="row mt-2">
-            <i class="fa-solid fa-phone fa-lg"></i>
+            
             <div class="col-12">
-              <lu>
-                <li>+57 320 692 2383</li>
-                <li>+57 320 748 3074</li>
-                <li>+57 300 477 7527</li>
-                <li>+57 319 245 5093</li>
-              </lu>
+              <ul class="phone">
+                <li><i class="fa-solid fa-phone fa-lg mx-3" ></i>+57 320 692 2383</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 320 748 3074</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 300 477 7527</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 319 245 5093</li>
+              </ul>
             </div>
           </div>
 
           <div class="row mt-2">
-            <div class="col-1">
-              <i class="fa-solid fa-envelope fa-lg"></i>
-            </div>
-            <div class="col-11"><label>email@email.com</label></div>
+            <div class="col-12 text-start"><i class="fa-solid fa-envelope fa-lg mx-3"></i><label>email@email.com</label></div>
           </div>
         </div>
       </div>

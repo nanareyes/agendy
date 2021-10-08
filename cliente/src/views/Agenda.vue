@@ -9,7 +9,7 @@
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col h-100">
                             <div class="card">
-                                <img src="@/assets/images/calendar.png" class="card-img-top" alt="semipermanente">
+                                <img src="@/assets/images/calendar.png" class="card-img-top px-3" alt="semipermanente">
                                 <div class="card-body">
                                     <h5 class="card-title">Manos y Pies</h5>
                                     <p class="card-text">La manicura semipermanente es un maquillaje en uñas con esmaltado

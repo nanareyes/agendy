@@ -8,7 +8,7 @@
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="@/assets/images/manicure3.jpg" style="height: 300px; width: 300px; padding: 1em;" class="img-fluid rounded-start" alt="manicure">
+                <img src="@/assets/images/manicure3.jpg" style="height: 300px; width: 300px; padding: 1em;" class="img-fluid rounded-start photo" alt="manicure">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
