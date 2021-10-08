@@ -134,9 +134,16 @@
 			"item": [
 				{
 					"name": "Consultar clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/clientes",
 							"protocol": "http",
@@ -162,28 +169,28 @@
 							"urlencoded": [
 								{
 									"key": "identificacion",
-									"value": "1024585963",
+									"value": "42154856",
 									"type": "text"
 								},
 								{
 									"key": "nombres",
-									"value": "Claudia Marcela",
+									"value": "Carolina",
 									"type": "text"
 								},
 								{
 									"key": "apellidos",
-									"value": "Patiño Torres",
+									"value": "Serna Reyes",
 									"type": "text"
 								},
 								{
 									"key": "fechaNacimiento",
-									"value": "28/09/1999",
+									"value": "25/09/2001",
 									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "direccion",
-									"value": "Carrera 25 59-85",
+									"value": "calle 44 15-58",
 									"type": "text"
 								},
 								{
@@ -198,17 +205,17 @@
 								},
 								{
 									"key": "telefono",
-									"value": "3117598678",
+									"value": "3104527896",
 									"type": "text"
 								},
 								{
 									"key": "correoElectronico",
-									"value": "claudiaPat@gmail.com",
+									"value": "sernap@gmail.com",
 									"type": "text"
 								},
 								{
-									"key": "contraseña",
-									"value": "8678",
+									"key": "password",
+									"value": "7896",
 									"type": "text"
 								}
 							]
@@ -287,9 +294,16 @@
 			"item": [
 				{
 					"name": "Consultar estilistas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/estilistas",
 							"protocol": "http",
@@ -315,32 +329,32 @@
 							"urlencoded": [
 								{
 									"key": "identificacion",
-									"value": "1108596789",
+									"value": "42154145",
 									"type": "text"
 								},
 								{
 									"key": "nombres",
-									"value": "Claudia Marcela",
+									"value": "Vanesa",
 									"type": "text"
 								},
 								{
 									"key": "apellidos",
-									"value": "Carrillo Sanchez",
+									"value": "Patiño Cardenas",
 									"type": "text"
 								},
 								{
 									"key": "fechaNacimiento",
-									"value": "10/10/2001",
+									"value": "5/12/1980",
 									"type": "text"
 								},
 								{
 									"key": "direccion",
-									"value": "calle 46 25-09",
+									"value": "cr 45 25-05",
 									"type": "text"
 								},
 								{
 									"key": "ciudad",
-									"value": "Dosquebradas",
+									"value": "Pereira",
 									"type": "text"
 								},
 								{
@@ -350,17 +364,17 @@
 								},
 								{
 									"key": "telefono",
-									"value": "311755885789",
+									"value": "3557489563",
 									"type": "text"
 								},
 								{
 									"key": "correoElectronico",
-									"value": "carrillo@gmail.com",
+									"value": "patiño@gmail.com",
 									"type": "text"
 								},
 								{
-									"key": "contraseña",
-									"value": "5789",
+									"key": "password",
+									"value": "9563",
 									"type": "text"
 								}
 							]
@@ -386,6 +400,10 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/estilista/615f5e43b7da1441f5be764f",
 							"protocol": "http",

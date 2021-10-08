@@ -11,7 +11,7 @@ const estilistaSchema = new Schema({
     departamento: {type: String, required: [true, 'Departamento obligatorio']}, 
     telefono: {type:Number, required:[true, 'teléfono requerido']},
     correoElectronico: {type: String, required: [true, 'Email obligatorio']},
-    contraseña: {type: Number, required: [true, 'Contraseña obligatoria']},
+    password: {type: Number, required: [true, 'Contraseña obligatoria']},
 });
 
 
