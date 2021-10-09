@@ -7,6 +7,22 @@
             <div class="card-body navigations">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col h-100">
+                        <Servicio 
+                            :src="src"
+                            title="Maquillaje semipermanente"
+                            shortDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado
+                                    de larga duración, el cual puede ser aplicado en uñas naturales o artificiales.."
+                            fullDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado de larga
+                            duración, el cual puede ser aplicado en uñas naturales, artificiales, de gel o acrílicas.
+
+                            Ventajas: duración, brillo y salud de la uñas.
+
+                            Dura hasta 14 días intacta.
+                            Fácil de quitar sin limar, con productos a base de acetona.
+                            Relación calidad precio.
+                            La única desventaja: llevar 14 días el mismo color."
+                        />
+
                         <div class="card">
                             <img src="@/assets/images/uñassemipermanente2.jpg" class="card-img-top" alt="semipermanente">
                             <div class="card-body">
@@ -73,3 +89,16 @@
         </div>
     </div> 
 </template>
+
+<script>
+import Servicio from "@/components/Servicio.vue";
+
+export default {
+  components: { Servicio },
+  data(){
+      return {
+          src: require("@/assets/images/uñassemipermanente2.jpg")
+      }
+  }
+}
+</script>
