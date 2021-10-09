@@ -8,12 +8,12 @@
     </div>  -->
 
   <div class="header" id="#menu">
-    <div class="row menubar">
-      <div class="col-6 menu-logo mt-2">
+    <div class="row menubar mb-3">
+      <div class="col-6 menu-logo py-2">
         <img src="@/assets/images/LOGO 1.svg">
         <img src="@/assets/images/logo.png">
       </div>
-      <div class="col-6 menu-links">
+      <div class="col-6 menu-links py-3">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -33,6 +33,7 @@
       </div>
     </div>
 </div>
+
 
 
 

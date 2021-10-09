@@ -5,7 +5,6 @@
                 Bienvenido a Nuestro Portafolio de Servicios
             </div>
             <div class="card-body navigations">
-
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col h-100">
                         <div class="card">
@@ -41,6 +40,8 @@
                             <router-link to="/gel" class="btn btn-action  btn-lg" tabindex="-1" role="button" aria-disabled="true">Ver más</router-link>
                         </div>
                     </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col h-100">
                         <div class="card">
                             <img src="@/assets/images/manicure2.jpg" class="card-img-top" alt="manicure">
@@ -65,8 +66,10 @@
                         </div>
                     </div>
                 </div>
-                <router-link to="/portafolioServicios" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
             </div>
         </div>
-    </div>
+        <div>
+            <router-link to="/portafolioServicios" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
+        </div>
+    </div> 
 </template>
