@@ -654,9 +654,21 @@ footer {
     height: 24px;
 }
 
-a.btn-action {
+a.btn-action, button.btn-action {
     background-color: #d7b1e6;
+    color: black;
     font-weight: 500;
+    border: none;
+    font-size: 1.1rem;
+}
+
+
+a.btn-action:hover, button.btn-action:hover {
+    background-color: #882baf;
+    color: white;
+    font-weight: 500;
+    border: none;
+    font-size: 1.1rem;
 }
 
 .card-service-image img {

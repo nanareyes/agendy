@@ -5,113 +5,9 @@
                 Galería de Fotos
             </div>
             <div class="card-body section-body">
-
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado.jpg" class="card-img-top" alt="semipermanente">
-
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado2.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="images/decorado3.jpg" style="height: 340px;" class="card-img-top" alt="acrilicas">
-                        </div>@/assets/
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado4.jpg" style="height: 340px;" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado5.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado6.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado7.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado8.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado9.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado12.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado11.jpg" class="card-img-top" alt="acrilicas">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado13.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado14.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado15.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado16.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="images/decorado17.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado18.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado19.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado21.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado22.jpg" class="card-img-top" alt="calendario">
-                        </div>
-                    </div>
-                    <div class="col h-100">
-                        <div class="card">
-                            <img src="@/assets/images/decorado23.jpg" class="card-img-top" alt="calendario">
-                        </div>
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div v-for="foto in fotos" class="col" :key="foto.id">
+                        <FotoServicio :src="foto.src" :description="foto.description" />
                     </div>
                 </div>
             </div>
@@ -122,3 +18,46 @@
 
     </div>
 </template>
+
+<script>
+import FotoServicio from "@/components/FotoServicio.vue";
+export default {
+  components: { FotoServicio },
+    data() {
+        // Metodo 1. Manual, cada foto se incluye con su src y descripcion
+        // return {
+        //     fotos: [
+        //         {
+        //             src: require("@/assets/images/decorado.jpg"),
+        //             description: "Lindas uñas acrílicas",
+        //         },
+        //         {
+        //             src: require("@/assets/images/decorado2.jpg"),
+        //             description: "Otras uñas acrílicas",
+        //         },
+        //     ],
+        // }
+        // Metodo 2. Ciclo
+        // Se define el array donde se van a cargar las fotos
+        const fotos = [];
+        // Ciclo que comienza en 1 y termina en 26
+        for (let i=1; i<= 26; i++) {
+            // Cada ingreso al ciclo, en el array adiciona un objeto
+            // que contiene la ruta de la foto y la descripcion. Adicionalmente
+            // se asigna un id para que sirva como key en el v-for
+            fotos.push({
+                id: i,
+                src: require(`@/assets/images/decorado${i}.jpg`),
+                description: `Uñas acrílicas ${i}`,
+            });
+        }
+        // Se retorna el array de fotos para que pueda ser usado en el v-for
+        return {
+            fotos
+        };
+    },
+}
+
+
+
+</script>

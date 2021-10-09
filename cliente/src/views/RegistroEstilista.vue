@@ -73,7 +73,7 @@
 
                         <div class="campos-formulario">
                             <label>Confirme su contraseña</label><br>
-                            <input v-model="estilista.password" type="password" id="password" name="password"
+                            <input v-model="estilista.password2" type="password2" id="password2" name="password2"
                                 placeholder="Confirme la contraseña" required class="formato">
                         </div>
                         <br>
@@ -116,6 +116,7 @@ export default {
                 telefono:'',
                 email: '',
                 password: '',
+                password2: '',
                 terminos:''
             }
         }
