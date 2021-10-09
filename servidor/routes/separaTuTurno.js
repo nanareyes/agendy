@@ -2,27 +2,27 @@ import express from "express";
 const router = express.Router();
 
 //importar modelo
-import Estilista from "../models/estilista";
+import SeparaTuTurno from "../models/separaTuTurno";
 
-//Ruta para consultar todos los estilistas
-router.get('/estilistas', async(req,res)=> {
+//Ruta para consultar todos los turnos
+router.get('/separaTuTurno', async(req,res)=> {
     try {
-        const estilistaDB = await Estilista.find();
-        res.json(estilistaDB);
+        const separaTuTurnoDB = await SeparaTuTurno.find();
+        res.json(separaTuTurnoDB);
     } catch (error) {
         return res.status(400).json({
-            mensaje: 'Se presentó un error al consultar los estilistas',
+            mensaje: 'Se presentó un error al consultar los turnos',
             error
         })
     }
 });
 
-//Ruta para consultar un estilista
-router.get('/estilista/:id', async (req, res) => {
+//Ruta para consultar un turno
+router.get('/separaTuTurno/:id', async (req, res) => {
     const _id = req.params.id;
     try {
-        const estilistaDB = await Estilista.findOne({ _id });
-        res.json(estilistaDB);
+        const separaTuTurnoDB = await SeparaTuTurno.findOne({ _id });
+        res.json(separaTuTurnoDB);
     }
     catch (error) {
         return res.status(400).json({
@@ -32,13 +32,13 @@ router.get('/estilista/:id', async (req, res) => {
     }
 });
 
-//Ruta para crear un nuevo estilista
-router.post('/nuevo-estilista', async (req, res) => {
+//Ruta para crear un nuevo turno
+router.post('/nuevo-turno', async (req, res) => {
     const body = req.body;
 
     try {
-        const estilistaDB = await Estilista.create(body);
-        res.status(200).json(estilistaDB);
+        const separaTuTurnoDB = await SeparaTuTurno.create(body);
+        res.status(200).json(separaTuTurnoDB);
     }
     catch (error) {
         return res.status(500).json({
@@ -47,20 +47,20 @@ router.post('/nuevo-estilista', async (req, res) => {
         })
     }
 });
-// Delete eliminar un estilista
-router.delete('/estilista/:id', async (req, res) => {
+// Delete eliminar un turno
+router.delete('/elimina-separaTuTurno/:id', async (req, res) => {
     const _id = req.params.id;
 
     try {
-        const estilistaDB = await Estilista.findByIdAndDelete({ _id });
+        const separaTuTurnoDB = await SeparaTuTurno.findByIdAndDelete({ _id });
 
-        if (!estilistaDB) {
+        if (!separaTuTurnoDB) {
             return res.status(400).json({
                 mensaje: 'No se encontró el id indicado',
                 error
             })
         }
-        res.json(estilistaDB);
+        res.json(separaTuTurnoDB);
     }
 
     catch (error) {
@@ -71,14 +71,14 @@ router.delete('/estilista/:id', async (req, res) => {
     }
 });
 
-// Put actualizar un estilista
-router.put('/estilista/:id', async (req, res) => {
+// Put actualizar un turno
+router.put('/actualizar-turno/:id', async (req, res) => {
     const _id = req.params.id;
     const body = req.body;
     try {
-        const estilistaDB = await Estilista.findByIdAndUpdate(
+        const separaTuTurnoDB = await SeparaTuTurno.findByIdAndUpdate(
             _id, body, { new: true });
-        res.json(estilistaDB);
+        res.json(separaTuTurnoDB);
     }
     catch (error) {
         return res.status(400).json({
