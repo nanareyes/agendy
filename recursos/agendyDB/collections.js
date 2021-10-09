@@ -1,1 +1,1 @@
-db.getCollection('separatuturnos').find({})
+db.getCollection('estilistas').find({})
