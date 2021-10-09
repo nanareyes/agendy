@@ -48,7 +48,7 @@ export default {
             fotos.push({
                 id: i,
                 src: require(`@/assets/images/decorado${i}.jpg`),
-                description: `Uñas acrílicas ${i}`,
+                description: `Decorado de uñas ${i}`,
             });
         }
         // Se retorna el array de fotos para que pueda ser usado en el v-for

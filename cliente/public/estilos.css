@@ -223,13 +223,13 @@ body {
 
 }
 
-.container-body {
+/* .container-body {
     display: flex;
     padding: 5px;
     width: 100%x;
     height: 280px;
 }
-
+ */
 .nav-element:hover {
     text-decoration: underline;
     font-weight: bold;
@@ -316,7 +316,6 @@ body {
 
 .servicios {
     background-color: #FAF4EB;
-    height: 380px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -500,7 +499,7 @@ footer {
 .container-registro {
     width: 100%;
     background-color: #FAF4EB;
-    height: 700px;
+    height: auto;
     margin-bottom: 20px;
     display: flex;
 }
@@ -660,6 +659,8 @@ a.btn-action, button.btn-action {
     font-weight: 500;
     border: none;
     font-size: 1.1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
