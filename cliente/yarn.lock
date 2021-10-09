@@ -7370,7 +7370,7 @@
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
 
-"sweetalert2@11.x":
+"sweetalert2@^11.1.7", "sweetalert2@11.x":
   "integrity" "sha512-7MHQVtKCTORfA9e58g9ZOfT3X58DkSBtvoCQJnqSHobXXb5C7aB8Yg/tAccTFnefCUBU41PoStjXMkzG3bNeig=="
   "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.1.7.tgz"
   "version" "11.1.7"

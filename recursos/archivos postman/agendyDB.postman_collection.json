@@ -452,6 +452,139 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "separaTuTurno",
+			"item": [
+				{
+					"name": "Consulta turnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api//separaTuTurno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"",
+								"separaTuTurno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creación turno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre_completo",
+									"value": "Camila",
+									"type": "text"
+								},
+								{
+									"key": "fecha_cita",
+									"value": "09/10/2021",
+									"type": "text"
+								},
+								{
+									"key": "ciudad",
+									"value": "Dosquebradas",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cacostan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "3217485689",
+									"type": "text"
+								},
+								{
+									"key": "registrarCita",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/nuevo-turno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nuevo-turno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar turno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/elimina-separaTuTurno/6160ed9c24def889516e5980",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"elimina-separaTuTurno",
+								"6160ed9c24def889516e5980"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualización turno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "fecha_cita",
+									"value": "09/10/2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/actualizar-turno/6160eceb24def889516e597e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"actualizar-turno",
+								"6160eceb24def889516e597e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

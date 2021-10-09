@@ -1,1 +1,1 @@
-db.getCollection('clientes').find({})
+db.getCollection('separatuturnos').find({})
