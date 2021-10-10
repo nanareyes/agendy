@@ -6,32 +6,32 @@
             </div>
             <div class="card-body section-body h-100">
                 <div class="row row-cols-1 row-cols-md-5 g-4"> 
-                        <Servicio id="modal-1"
-                            :src="foto1"
-                            title="Maquillaje semipermanente"
-                            shortDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado
-                                    de larga duración, el cual puede ser aplicado en uñas naturales o artificiales.."
-                            fullDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado de larga
-                            duración, el cual puede ser aplicado en uñas naturales, artificiales, de gel o acrílicas.
+                    <Servicio id="modal-1"
+                        :src="foto1"
+                        title="Maquillaje semipermanente"
+                        shortDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado
+                                de larga duración, el cual puede ser aplicado en uñas naturales o artificiales.."
+                        fullDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado de larga
+                        duración, el cual puede ser aplicado en uñas naturales, artificiales, de gel o acrílicas.
 
-                            Ventajas: duración, brillo y salud de la uñas,dura hasta 14 días intacta, es fácil de quitar sin limar, con productos a base de acetona.
-                            La única desventaja es que tendrás que llevar 14 días el mismo color."
-                        />
-                        <Servicio id="modal-2"
-                            :src="foto2"
-                            title="Uñas Acrílicas"
-                            shortDescription="Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combina en una masa, se da forma a las uñas con un cepillo y luego se seca al aire libre.
-                                    Es una forma artificial de extender tus uñas, agregar fuerza y grosor."
-                            fullDescription="Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combina en una masa, se da forma a las uñas con un cepillo y luego se seca al aire libre.
-                                    Es una forma de extender las uñas, agregar fuerza, longitud y grosor.
+                        Ventajas: duración, brillo y salud de la uñas,dura hasta 14 días intacta, es fácil de quitar sin limar, con productos a base de acetona.
+                        La única desventaja es que tendrás que llevar 14 días el mismo color."
+                    />
+                    <Servicio id="modal-2"
+                        :src="foto2"
+                        title="Uñas Acrílicas"
+                        shortDescription="Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combina en una masa, se da forma a las uñas con un cepillo y luego se seca al aire libre.
+                                Es una forma artificial de extender tus uñas, agregar fuerza y grosor."
+                        fullDescription="Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combina en una masa, se da forma a las uñas con un cepillo y luego se seca al aire libre.
+                                Es una forma de extender las uñas, agregar fuerza, longitud y grosor.
 
-                                    La manicura para uñas acrílicas se puede realizar mediante puntas o moldes las cuales se
-                                    adhieren a la uña. Algunas de sus ventajas es que puedes reconstruir las uñas rotas y mordidas fácilmente para llevarlas siempre
-                                    perfectas. Protege las uñas naturales de los efectos dañinos de los esmaltes y otros agentes, solo si lo
-                                    realizas y retiras correctamente, el mantenimiento de este procedimiento se realiza cada 15 a 20 días, dependiendo del crecimiento de tu uña. 
-                                    Algunas desventajas de poner uñas acrílicas es que si no te realizas un buen procedimiento, puede provocar infecciones, afectar el crecimiento de la uña natural.
-                                    Muchos expertos recomiendan otorgar descansos de una a dos semanas para volver a poner las uñas postizas.
-                                    Como siempre es importante que estos procedimientos los realices con un profesional capacitado. "
+                                La manicura para uñas acrílicas se puede realizar mediante puntas o moldes las cuales se
+                                adhieren a la uña. Algunas de sus ventajas es que puedes reconstruir las uñas rotas y mordidas fácilmente para llevarlas siempre
+                                perfectas. Protege las uñas naturales de los efectos dañinos de los esmaltes y otros agentes, solo si lo
+                                realizas y retiras correctamente, el mantenimiento de este procedimiento se realiza cada 15 a 20 días, dependiendo del crecimiento de tu uña. 
+                                Algunas desventajas de poner uñas acrílicas es que si no te realizas un buen procedimiento, puede provocar infecciones, afectar el crecimiento de la uña natural.
+                                Muchos expertos recomiendan otorgar descansos de una a dos semanas para volver a poner las uñas postizas.
+                                Como siempre es importante que estos procedimientos los realices con un profesional capacitado. "
                         />
 
                         <Servicio id="modal-3"

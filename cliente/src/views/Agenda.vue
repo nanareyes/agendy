@@ -12,7 +12,7 @@
                         <p class="card-text">Por favor ingresa la siguiente información para poder agenda tu cita</p>
                     </div>
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md-4"> 
                             <img src="@/assets/images/calendar.png" class="img-fluid rounded-start photo" alt="semi">
                         </div>
                         <div class="col-md-8">
@@ -176,7 +176,7 @@ export default {
                 console.log(mensaje)
             })
         }
-    } 
+    }
 }
 </script>
 <style scoped>

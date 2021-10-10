@@ -6,7 +6,7 @@
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-text">{{ shortDescription }}</p>
       </div>
-      <b-button v-b-modal.modal-2 class="btn-action"> Ver Más</b-button>
+      <b-button v-b-modal="id" class="btn-action"> Ver Más</b-button>
     </div>
 
     <b-modal :id="id" :title="title" cancel-disabled="true">
