@@ -96,7 +96,6 @@
         <div class="back">
             <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
         </div>
-        <br>
     </div>
 </template>
 

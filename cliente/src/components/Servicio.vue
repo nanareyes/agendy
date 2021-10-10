@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="card pb-2">
-      <img :src="src" class="card-img-top" />
+    <div class="card h-100 pb-2">
+      <img :src="src" class="card-img-top pb-2" />
       <div class="card-body">
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-text">{{ shortDescription }}</p>
       </div>
-      <b-button v-b-modal.modal-1 class="btn-action"> Ver Más</b-button>
+      <b-button v-b-modal="id" class="btn-action"> Ver Más</b-button>
     </div>
 
-    <b-modal id="modal-1" :title="title" cancel-disabled="true">
+    <b-modal :id="id" :title="title" cancel-disabled="true">
       <div class="card">
         <img :src="src" class="card-img-top" />
         <div class="card-body">
@@ -25,6 +25,7 @@
 export default {
   name: "Servicio",
   props: {
+    id: String,
     src: String,
     title: String,
     shortDescription: String,
