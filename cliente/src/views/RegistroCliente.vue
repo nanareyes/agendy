@@ -138,13 +138,13 @@ export default {
                     if (status_peticion === 200) {
                         this.$swal.fire(
                             'Registro exitoso',
-                            'Se ha resgistrado con el usuario ' + this.cliente.email,
+                            'Se ha resgistrado con el usuario ' + this.cliente.correoElectronico,
                             'success'
                         )
                     } else {
                         this.$swal.fire(
                             'Cliente NO registrado',
-                            'Ocurrió un error al registrarse con el correo ' + this.cliente.email,
+                            'Ocurrió un error al registrarse con el correo ' + this.cliente.correoElectronico,
                             'error'
                         )
                     }
