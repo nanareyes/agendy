@@ -125,7 +125,7 @@ export default {
         
     methods: {
         registraragenda () {
-        console.log (this.agenda.fecha_agenda, this.agenda.hora)
+        console.log (this.agenda)
             const cita = {
                 nombre_completo: this.agenda.nombre_completo,
                 fecha_agenda: new Date(`${this.agenda.fecha_agenda}T${this.agenda.hora}:00`),
@@ -143,13 +143,13 @@ export default {
                 if (status_peticion === 200) {
                     this.$swal.fire(
                         'Registro exitoso',
-                        'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
+                        'Se ha resgistrado su agenda para el ' + this.agenda.fecha_agenda,
                         'success'
                     )
                 } else {
                     this.$swal.fire(
                         'Cliente NO registrado',
-                        'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
+                        'Ocurrió un error al registrarse su agenda para el ' + this.agenda.fecha_agenda,
                         'error'
                     )
                 }
@@ -157,37 +157,37 @@ export default {
                 console.log(mensaje)
             })
         },
-        registraragendaLogin () {
+        // registraragendaLogin () {
             
-            const cita_login = {
-                fecha_agenda: new Date(`${this.agenda.fecha_agenda}T${this.agenda.hora}:00`),
-                email: this.agenda.email,
+        //     const cita_login = {
+        //         fecha_agenda: new Date(`${this.agenda.fecha_agenda}T${this.agenda.hora}:00`),
+        //         email: this.agenda.email,
 
-            }
-            axios.post('http://localhost:3000/api/nueva-agenda-login',
-            cita_login
-            )
-            .then(response => {
-                console.log(response)
-                let status_peticion = response.status
-                console.log(status_peticion)
-                if (status_peticion === 200) {
-                    this.$swal.fire(
-                        'Registro exitoso',
-                        'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
-                        'success'
-                    )
-                } else {
-                    this.$swal.fire(
-                        'Cliente NO registrado',
-                        'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
-                        'error'
-                    )
-                }
-                let mensaje = response.data
-                console.log(mensaje)
-            })
-        }
+        //     }
+        //     axios.post('http://localhost:3000/api/nueva-agenda-login',
+        //     cita_login
+        //     )
+        //     .then(response => {
+        //         console.log(response)
+        //         let status_peticion = response.status
+        //         console.log(status_peticion)
+        //         if (status_peticion === 200) {
+        //             this.$swal.fire(
+        //                 'Registro exitoso',
+        //                 'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
+        //                 'success'
+        //             )
+        //         } else {
+        //             this.$swal.fire(
+        //                 'Cliente NO registrado',
+        //                 'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
+        //                 'error'
+        //             )
+        //         }
+        //         let mensaje = response.data
+        //         console.log(mensaje)
+        //     })
+        // }
     }
 }
 </script>
