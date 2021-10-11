@@ -2,13 +2,29 @@ import express from "express";
 const router = express.Router();
 
 //importar modelo
-import SeparaTuTurno from "../models/separaTuTurno";
+import Agenda from "../models/agenda";
+
+//Ruta para crear un nuevo turno
+router.post('/nueva-agenda', async (req, res) => {
+    const body = req.body;
+
+    try {
+        const agendaDB = await Agenda.create(body);
+        res.status(200).json(agendaDB);
+    }
+    catch (error) {
+        return res.status(500).json({
+            mensaje: 'Ocurrio un error',
+            error
+        })
+    }
+});
 
 //Ruta para consultar todos los turnos
-router.get('/separaTuTurno', async(req,res)=> {
+router.get('/agenda', async(req,res)=> {
     try {
-        const separaTuTurnoDB = await SeparaTuTurno.find();
-        res.json(separaTuTurnoDB);
+        const agendaDB = await Agenda.find();
+        res.json(agendaDB);
     } catch (error) {
         return res.status(400).json({
             mensaje: 'Se presentó un error al consultar los turnos',
@@ -18,11 +34,11 @@ router.get('/separaTuTurno', async(req,res)=> {
 });
 
 //Ruta para consultar un turno
-router.get('/separaTuTurno/:id', async (req, res) => {
+router.get('/agenda/:id', async (req, res) => {
     const _id = req.params.id;
     try {
-        const separaTuTurnoDB = await SeparaTuTurno.findOne({ _id });
-        res.json(separaTuTurnoDB);
+        const agendaDB = await Agenda.findOne({ _id });
+        res.json(agendaDB);
     }
     catch (error) {
         return res.status(400).json({
@@ -32,29 +48,15 @@ router.get('/separaTuTurno/:id', async (req, res) => {
     }
 });
 
-//Ruta para crear un nuevo turno
-router.post('/nuevo-turno', async (req, res) => {
-    const body = req.body;
 
-    try {
-        const separaTuTurnoDB = await SeparaTuTurno.create(body);
-        res.status(200).json(separaTuTurnoDB);
-    }
-    catch (error) {
-        return res.status(500).json({
-            mensaje: 'Ocurrio un error',
-            error
-        })
-    }
-});
 // Delete eliminar un turno
-router.delete('/elimina-separaTuTurno/:id', async (req, res) => {
+router.delete('/eliminar-agenda/:id', async (req, res) => {
     const _id = req.params.id;
 
     try {
-        const separaTuTurnoDB = await SeparaTuTurno.findByIdAndDelete({ _id });
+        const agendaDB = await Agenda.findByIdAndDelete({ _id });
 
-        if (!separaTuTurnoDB) {
+        if (!agendaDB) {
             return res.status(400).json({
                 mensaje: 'No se encontró el id indicado',
                 error
@@ -72,13 +74,13 @@ router.delete('/elimina-separaTuTurno/:id', async (req, res) => {
 });
 
 // Put actualizar un turno
-router.put('/actualizar-turno/:id', async (req, res) => {
+router.put('/actualizar-agenda/:id', async (req, res) => {
     const _id = req.params.id;
     const body = req.body;
     try {
-        const separaTuTurnoDB = await SeparaTuTurno.findByIdAndUpdate(
+        const agendaDB = await Agenda.findByIdAndUpdate(
             _id, body, { new: true });
-        res.json(separaTuTurnoDB);
+        res.json(agendaDB);
     }
     catch (error) {
         return res.status(400).json({

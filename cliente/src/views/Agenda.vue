@@ -8,8 +8,8 @@
 
                 <div class="card mb-3" style="max-width: 100%;">
                     <div class="card-body">
-                        <h5 class="card-title">Agenda tu cita</h5>
-                        <p class="card-text">Por favor ingresa la siguiente información para poder agenda tu cita</p>
+                        <h5 class="card-title">Agenda tu agenda</h5>
+                        <p class="card-text">Por favor ingresa la siguiente información para poder agenda tu agenda</p>
                     </div>
                     <div class="row g-0">
                         <div class="col-md-4"> 
@@ -25,53 +25,53 @@
                                                 </div>
                                             <div class="campos-formulario">
                                                 <label>Nombre </label><br>
-                                                <input v-model="cita.nombre_completo"  type="text" id="nombre_completo" name="nombre_completo" placeholder="Ingrese su nombre completo"
+                                                <input v-model="agenda.nombre_completo"  type="text" id="nombre_completo" name="nombre_completo" placeholder="Ingrese su nombre completo"
                                                     required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
-                                                <label>Fecha de la cita </label><br>
-                                                <input v-model="cita.fecha_cita"  type="date" id="fecha_cita" name="fecha_cita" required class="formato">
+                                                <label>Fecha de la agenda </label><br>
+                                                <input v-model="agenda.fecha_agenda"  type="date" id="fecha_agenda" name="fecha_agenda" required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
-                                                <label>Hora de la cita </label><br>
-                                                <input v-model="hora"  type="time" id="hora" name="hora" required class="formato">
+                                                <label>Hora de la agenda </label><br>
+                                                <input v-model="agenda.hora"  type="time" id="hora" name="hora" required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
                                                 <label>Ciudad</label><br>
-                                                <input v-model="cita.ciudad"  type="text" id="ciudad" name="ciudad" placeholder="Ingrese la ciudad" required
+                                                <input v-model="agenda.ciudad"  type="text" id="ciudad" name="ciudad" placeholder="Ingrese la ciudad" required
                                                     class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
                                                 <label>Correo Electrónico</label> <br>
-                                                <input v-model="cita.email"  type="email" id="correo" name="email" placeholder="Ingrese correo electrónico"
+                                                <input v-model="agenda.email"  type="email" id="correo" name="email" placeholder="Ingrese correo electrónico"
                                                     required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
                                                 <label>Teléfono</label><br>
-                                                <input v-model="cita.telefono"  type="text" id="telefono" name="telefono"
+                                                <input v-model="agenda.telefono"  type="text" id="telefono" name="telefono"
                                                     placeholder="Ingrese el número telefónico y/o celular" required class="formato">
                                             </div>
 
                                             <div class="campos-formulario form-group">
-                                                <input @click="registrarCita()" class="btn btn-primary" tabindex="-1" role="button" value="Agendar Cita">
+                                                <input @click="registraragenda()" class="btn btn-primary" tabindex="-1" role="button" value="Agendar cita">
                                             </div>
                                         </form>
 
                                         <form >
                                             <p class="datos-basicos"> Si ya estás registrado, ingresa tu usuario y contraseña aquí:</p>
                                             <div class="campos-formulario">
-                                                <label>Fecha de la cita </label><br>
-                                                <input v-model="login_fecha_cita"  type="date" id="login_fecha_cita" name="login_fecha_cita" required class="formato">
+                                                <label>Fecha de la agenda </label><br>
+                                                <input v-model="login.fecha_agenda"  type="date" id="login_fecha_agenda" name="login_fecha_agenda" required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
-                                                <label>Hora de la cita </label><br>
-                                                <input v-model="login_hora"  type="time" id="hora" name="hora" required class="formato">
+                                                <label>Hora de la agenda </label><br>
+                                                <input v-model="login.hora"  type="time" id="hora" name="hora" required class="formato">
                                             </div>
 
                                             <div class="campos-formulario">
@@ -86,7 +86,7 @@
                                                     required class="formato">
                                             </div>
                                             <div class="campos-formulario form-group">
-                                                <input @click="registrarCitaLogin()" class="btn btn-primary" tabindex="-1" role="button" value="Agendar Cita">
+                                                <input @click="registraragendaLogin()" class="btn btn-primary" tabindex="-1" role="button" value="Agendar agenda">
                                             </div>
                                         </form>
                                     </div>
@@ -103,20 +103,20 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
     data () {
         return {
-            cita: {
+            agenda: {
                 nombre_completo: '',
-                fecha_cita: '',
+                fecha_agenda: '',
                 hora: '',
                 ciudad: '',
                 email: '',
                 telefono:'',
             },
             login: {
-                login_fecha_cita: '',
+                login_fecha_agenda: '',
                 email: '',
                 password: ''
             }
@@ -124,11 +124,18 @@ export default {
     },
         
     methods: {
-        registrarCita () {
-            axios.post('http://localhost:3000/api/nuevo-cliente',
-            {
-                data: this.cliente
-            })
+        registraragenda () {
+        console.log (this.agenda.fecha_agenda, this.agenda.hora)
+            const cita = {
+                nombre_completo: this.agenda.nombre_completo,
+                fecha_agenda: new Date(`${this.agenda.fecha_agenda}T${this.agenda.hora}:00`),
+                ciudad: this.agenda.ciudad,
+                email: this.agenda.email,
+                telefono:this.agenda.telefono,
+            }
+            axios.post('http://localhost:3000/api/nueva-agenda',
+            cita
+            )
             .then(response => {
                 console.log(response)
                 let status_peticion = response.status
@@ -136,13 +143,13 @@ export default {
                 if (status_peticion === 200) {
                     this.$swal.fire(
                         'Registro exitoso',
-                        'Se ha resgistrado su cita para el ' + this.cliente.fecha_cita,
+                        'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
                         'success'
                     )
                 } else {
                     this.$swal.fire(
                         'Cliente NO registrado',
-                        'Ocurrió un error al registrarse su cita para el ' + this.cliente.fecha_cita,
+                        'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
                         'error'
                     )
                 }
@@ -150,11 +157,16 @@ export default {
                 console.log(mensaje)
             })
         },
-        registrarCitaLogin () {
-            axios.post('http://localhost:3000/api/nuevo-cliente',
-            {
-                data: this.cliente
-            })
+        registraragendaLogin () {
+            
+            const cita_login = {
+                fecha_agenda: new Date(`${this.agenda.fecha_agenda}T${this.agenda.hora}:00`),
+                email: this.agenda.email,
+
+            }
+            axios.post('http://localhost:3000/api/nueva-agenda-login',
+            cita_login
+            )
             .then(response => {
                 console.log(response)
                 let status_peticion = response.status
@@ -162,13 +174,13 @@ export default {
                 if (status_peticion === 200) {
                     this.$swal.fire(
                         'Registro exitoso',
-                        'Se ha resgistrado su cita para el ' + this.cliente.login_fecha_cita,
+                        'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
                         'success'
                     )
                 } else {
                     this.$swal.fire(
                         'Cliente NO registrado',
-                        'Ocurrió un error al registrarse su cita para el ' + this.cliente.login_fecha_cita,
+                        'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
                         'error'
                     )
                 }

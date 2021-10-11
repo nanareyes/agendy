@@ -2,10 +2,10 @@
     <div class="registroEstilista">
         <div class="section-1" id="portafolioSevicios">
             <p class="section-text">Registro ESTILISTA</p>
-
-            <div class="container-registro">
-                <div class="row registro1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <form>
+            <form>
+                <div class="container-registro">
+                    <div class="row registro1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    
                         <p class="datos-basicos"> Ingrese aquí su información de contacto:</P>
 
 
@@ -52,16 +52,16 @@
                             <input v-model="estilista.telefono"  type="text" id="telefono" name="telefono"
                                 placeholder="Ingrese el número telefónico y/o celular" required class="formato">
                         </div>
-                    </form>
-                </div>
 
-                <div class="row registro2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <form >
+                    </div>
+
+                    <div class="row registro2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    
                         <p class="datos-basicos"> Ingrese aquí la información para la creación de su perfil:</P> <br>
 
                         <div class="campos-formulario">
                             <label>Correo Electrónico</label> <br>
-                            <input v-model="estilista.email"  type="email" id="correo" name="email" placeholder="Ingrese correo electrónico"
+                            <input v-model="estilista.correoElectronico"  type="correoElectronico" id="correoElectronico" name="correoElectronico" placeholder="Ingrese correo electrónico"
                                 required class="formato">
                         </div>
 
@@ -73,7 +73,7 @@
 
                         <div class="campos-formulario">
                             <label>Confirme su contraseña</label><br>
-                            <input v-model="estilista.password2" type="password2" id="password2" name="password2"
+                            <input v-model="estilista.password2" type="password" id="password2" name="password2"
                                 placeholder="Confirme la contraseña" required class="formato">
                         </div>
                         <br>
@@ -89,9 +89,11 @@
                         <div class="campos-formulario form-group">
                             <input @click="registrarCliente()" class="btn btn-primary" tabindex="-1" role="button" value="Registrar">
                         </div>
-                    </form>
+                    
+                    </div>
                 </div>
-            </div>
+            </form>
+
         </div>
         <div class="back">
             <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
@@ -100,7 +102,7 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
     data () {
         return {
@@ -108,12 +110,12 @@ export default {
                 identificacion: '',
                 nombres: '',
                 apellidos: '',
-                fecha_nacimiento: '',
+                fechaNacimiento: '',
                 direccion: '',
                 ciudad: '',
                 departamento: '',
                 telefono:'',
-                email: '',
+                correoElectronico: '',
                 password: '',
                 password2: '',
                 terminos:''
@@ -122,30 +124,37 @@ export default {
     },
     methods: {
         registrarCliente () {
-            axios.post('http://localhost:3000/api/nuevo-estilista',
-            {
-                data: this.estilista
-            })
-            .then(response => {
-                console.log(response)
-                let status_peticion = response.status
-                console.log(status_peticion)
-                if (status_peticion === 200) {
-                    this.$swal.fire(
-                        'Registro exitoso',
-                        'Se ha resgistrado con el usuario ' + this.estilista.email,
-                        'success'
-                    )
-                } else {
-                    this.$swal.fire(
-                        'Cliente NO registrado',
-                        'Ocurrió un error al registrarse con el correo ' + this.estilista.email,
-                        'error'
-                    )
-                }
-                let mensaje = response.data
-                console.log(mensaje)
-            })
+            if (this.estilista.password === this.estilista.password2){
+                axios.post('http://localhost:3000/api/nuevo-estilista',
+                
+                this.estilista
+                )
+                .then(response => {
+                    console.log(response)
+                    let status_peticion = response.status
+                    console.log(status_peticion)
+                    if (status_peticion === 200) {
+                        this.$swal.fire(
+                            'Registro exitoso',
+                            'Se ha resgistrado con el usuario ' + this.estilista.email,
+                            'success'
+                        )
+                    } else {
+                        this.$swal.fire(
+                            'Cliente NO registrado',
+                            'Ocurrió un error al registrarse con el correo ' + this.estilista.email,
+                            'error'
+                        )
+                    }
+                    let mensaje = response.data
+                    console.log(mensaje)
+                })
+            }else {
+                this.$swal.fire(
+                            'Error de contraseña',
+                            'Ocurrió un error al confirmar la contraseña',
+                            'error')
+            }
         }
     }
 }
