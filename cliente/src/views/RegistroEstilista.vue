@@ -136,13 +136,13 @@ export default {
                     if (status_peticion === 200) {
                         this.$swal.fire(
                             'Registro exitoso',
-                            'Se ha resgistrado con el usuario ' + this.estilista.email,
+                            'Se ha resgistrado con el usuario ' + this.estilista.correoElectronico,
                             'success'
                         )
                     } else {
                         this.$swal.fire(
                             'Cliente NO registrado',
-                            'Ocurrió un error al registrarse con el correo ' + this.estilista.email,
+                            'Ocurrió un error al registrarse con el correo ' + this.estilista.correoElectronico,
                             'error'
                         )
                     }
