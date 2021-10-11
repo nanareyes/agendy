@@ -4,6 +4,24 @@ const router = express.Router();
 //importar modelo
 import Cliente from "../models/cliente";
 
+//Ruta para crear un nuevo cliente
+router.post('/nuevo-cliente', async (req, res) => {
+    const body = req.body;
+    console.log('body**********************', body);
+
+    try {
+        const clienteDB = await Cliente.create(body);
+        res.status(200).json(clienteDB);
+    }
+    catch (error) {
+        console.log(error)
+        return res.status(500).json({
+            mensaje: 'Ocurrio un error',
+            error
+        })
+    }
+});
+
 //Ruta para consultar todos los clientes
 router.get('/clientes', async(req,res)=> {
     try {
@@ -25,22 +43,6 @@ router.get('/cliente/:id', async (req, res) => {
     }
     catch (error) {
         return res.status(400).json({
-            mensaje: 'Ocurrio un error',
-            error
-        })
-    }
-});
-
-//Ruta para crear un nuevo cliente
-router.post('/nuevo-cliente', async (req, res) => {
-    const body = req.body;
-
-    try {
-        const clienteDB = await Cliente.create(body);
-        res.status(200).json(clienteDB);
-    }
-    catch (error) {
-        return res.status(500).json({
             mensaje: 'Ocurrio un error',
             error
         })
