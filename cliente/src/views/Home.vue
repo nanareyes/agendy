@@ -17,8 +17,8 @@
                     <h4 class="card-title">Registro de Usuarios</h4>
                     <div class="card-text">
                       <div class="d-grid gap-2">
-                          <router-link to="/registroEstilista" class="btn btn-action">Registro Estilistas </router-link>
-                          <router-link to="/registroCliente" class="btn btn-action">Registro Clientes </router-link>
+                          <router-link to="/user" class="btn btn-action">Registrese aquí </router-link>
+                          <!-- <router-link to="/registroCliente" class="btn btn-action">Registro Clientes </router-link> -->
                       </div>
                     </div>
                   
@@ -34,8 +34,8 @@
                     <h4 class="card-title">Inicio de Sesión</h4>
                     <div class="card-text">
                       <div class="d-grid gap-2">
-                        <router-link to="/inicioestilista" class="btn btn-action">Iniciar sesión Estilistas </router-link>
-                        <router-link to="/iniciocliente" class="btn btn-action">Iniciar sesión Clientes </router-link>
+                        <router-link to="/login" class="btn btn-action">Iniciar sesión</router-link>
+                        <!-- <router-link to="/iniciocliente" class="btn btn-action">Iniciar sesión Clientes </router-link> -->
                       </div>
                     </div>
                   </div>

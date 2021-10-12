@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 
+
 const app = express();
 
 // Conexión base de datos
@@ -30,9 +31,11 @@ app.use(express.urlencoded({ extended: true }));
 // });
 app.use('/api', require('./routes/nota'));
 app.use('/api', require('./routes/servicio'));
-app.use('/api', require('./routes/cliente'));
+app.use('/api', require('./routes/user'));
 app.use('/api', require('./routes/estilista'));
 app.use('/api', require('./routes/agenda'));
+app.use('/login', require('./routes/login'));
+
 
 // Middleware para Vue.js router modo history
 const history = require('connect-history-api-fallback');

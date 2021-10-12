@@ -20,9 +20,6 @@
                                 <div class="container-registro">
                                     <div class="row registro1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <form>
-                                            <div class="col-1">
-                                                <router-link to="/portafolioServicios" button type="button" aria-label="Close" class="btn btn-action">X</router-link>
-                                                </div>
                                             <div class="campos-formulario">
                                                 <label>Nombre </label><br>
                                                 <input v-model="agenda.nombre_completo"  type="text" id="nombre_completo" name="nombre_completo" placeholder="Ingrese su nombre completo"
@@ -62,7 +59,7 @@
                                             </div>
                                         </form>
 
-                                        <form >
+                                        <!-- <form >
                                             <p class="datos-basicos"> Si ya estás registrado, ingresa tu usuario y contraseña aquí:</p>
                                             <div class="campos-formulario">
                                                 <label>Fecha de la agenda </label><br>
@@ -88,7 +85,7 @@
                                             <div class="campos-formulario form-group">
                                                 <input @click="registraragendaLogin()" class="btn btn-primary" tabindex="-1" role="button" value="Agendar agenda">
                                             </div>
-                                        </form>
+                                        </form> -->
                                     </div>
                                 </div>
                                 
@@ -96,7 +93,12 @@
                         </div>
                     </div>
                 </div>
-                <router-link to="/" class="btn btn-action">Volver a la página principal </router-link>
+                <div>
+                <router-link to="portafolioServicios" class="btn btn-action">Regresar </router-link>
+                </div>
+                <div>
+                <router-link to="/" class="btn btn-action">Ir a la página principal </router-link>
+                </div>
             </div>
         </div>
     </div>
@@ -174,13 +176,13 @@ export default {
         //         if (status_peticion === 200) {
         //             this.$swal.fire(
         //                 'Registro exitoso',
-        //                 'Se ha resgistrado su agenda para el ' + this.cliente.fecha_agenda,
+        //                 'Se ha resgistrado su agenda para el ' + this.agenda.fecha_agenda,
         //                 'success'
         //             )
         //         } else {
         //             this.$swal.fire(
         //                 'Cliente NO registrado',
-        //                 'Ocurrió un error al registrarse su agenda para el ' + this.cliente.fecha_agenda,
+        //                 'Ocurrió un error al registrarse su agenda para el ' + this.agenda.fecha_agenda,
         //                 'error'
         //             )
         //         }
