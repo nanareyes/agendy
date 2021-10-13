@@ -18,14 +18,7 @@
                                 <label for="exampleInputPassword1" class="form-label text-start">Contraseña</label>
                                 <input v-model="user.password" type="password" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <div class="campos-formulario mb-3 text-start mx-3 ">Tipo de usuario
-                                <select v-model="user.users">
-                                    <option disabled value="user.users">Seleccione el tipo de usuario</option>
-                                    <option>Cliente</option>
-                                    <option>Estilista</option>
-                                </select>
-                                
-                            </div>
+                            
                             <input @click="loginUser()" class="btn btn-primary" tabindex="-1" role="button" value="Ingresar">
                         </form>
                     </div>
@@ -44,13 +37,14 @@
 
 <script>
 import axios from 'axios';
+import jwt from 'jsonwebtoken';
+
 export default {
     data () {
         return {
             user: {
                 email: '',
-                password: '',
-                users: ''
+                password: ''
 
             }
         }
@@ -62,15 +56,34 @@ export default {
             this.user
             )
             .then(response => {
-                console.log(response)
-                let status_peticion = response.status
-                console.log(status_peticion)
+                //console.log(response)
+                const status_peticion = response.status
+                const token = response.data.token
+                //console.log(status_peticion)
                 if (status_peticion === 200) {
-                    this.$swal.fire(
-                        'Ingreso exitoso',
-                        'Ha ingresado con el usuario ' + this.user.email,
-                        'success'
-                    )
+                    localStorage.setItem('token', token)
+
+                    jwt.verify(token, 'secret',
+                        (err, datosToken) => {
+                            if (err) {
+                                this.$swal.fire(
+                                        'Error token',
+                                        'Token no es válido',
+                                        'error'
+                                )
+                            } else {
+                                // console.log('decoded token:', decoded)
+                                // Guardar el token decodificado en el localStorage
+                                localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
+                                // Del token se lee el tipo de usuario: Cliente o Estilista
+                                const tipo = datosToken.data.tipo
+                                if (tipo === 'Cliente') {
+                                    this.$router.push("/inicio")
+                                } else {
+                                    this.$router.push("/servicios")
+                                }
+                            }
+                    });
                 } else {
                     this.$swal.fire(
                         'Usuario NO registrado',
@@ -79,7 +92,7 @@ export default {
                     )
                 }
                 let mensaje = response.data
-                console.log(mensaje)
+                //console.log(mensaje)
             })
         }
     }

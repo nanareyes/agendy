@@ -7,9 +7,20 @@ import Agenda from "../models/agenda";
 //Ruta para crear un nuevo turno
 router.post('/nueva-agenda', async (req, res) => {
     const body = req.body;
+    const user = req.user;
+    console.log(body);
+    console.log(req.user);
+
+    const cita = {
+        idUsuario: user._id,
+        fecha_agenda: body.fecha_agenda,
+        ciudad: body.ciudad,
+        email: body.email,
+        telefono: body.telefono,
+    }
 
     try {
-        const agendaDB = await Agenda.create(body);
+        const agendaDB = await Agenda.create(cita);
         res.status(200).json(agendaDB);
     }
     catch (error) {

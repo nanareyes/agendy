@@ -35,6 +35,8 @@
                     >
                   </li>
                 </ul>
+                <span>Hola, {{datosUsuario.nombres}}</span>
+                <button type="button" @click="logout"> Salir</button> 
               </div>
             </div>
           </nav>
@@ -51,6 +53,13 @@
 <script>
 export default {
   name: "menu",
+  data(){
+    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
+    console.log('datos usuario en inicio', datosUsuario)
+    return {
+      datosUsuario
+    }
+  }
 };
 </script>
 <style scoped>

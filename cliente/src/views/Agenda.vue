@@ -20,12 +20,7 @@
                                 <div class="container-registro">
                                     <div class="row registro1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <form>
-                                            <div class="campos-formulario">
-                                                <label>Nombre </label><br>
-                                                <input v-model="agenda.nombre_completo"  type="text" id="nombre_completo" name="nombre_completo" placeholder="Ingrese su nombre completo"
-                                                    required class="formato">
-                                            </div>
-
+                                            
                                             <div class="campos-formulario">
                                                 <label>Fecha de la agenda </label><br>
                                                 <input v-model="agenda.fecha_agenda"  type="date" id="fecha_agenda" name="fecha_agenda" required class="formato">
@@ -106,16 +101,21 @@
 
 <script>
 import axios from 'axios';
+
+const token = localStorage.getItem('token')
+const datosUsuario = JSON.parse (localStorage.getItem('datosUsuario'))
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+
 export default {
     data () {
         return {
             agenda: {
-                nombre_completo: '',
                 fecha_agenda: '',
                 hora: '',
-                ciudad: '',
-                email: '',
-                telefono:'',
+                ciudad: datosUsuario.ciudad,
+                email: datosUsuario.email,
+                telefono:datosUsuario.telefono,
             },
             login: {
                 login_fecha_agenda: '',

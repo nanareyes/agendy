@@ -12,7 +12,7 @@ const userSchema = new Schema({
     telefono: {type:Number, required:[true, 'teléfono requerido']},
     email: {type: String, required: [true, 'Email obligatorio']},
     password: {type: String, required: [true, 'Contraseña obligatoria']},
-    users: {type: String, required: [true, 'Usuario obligatorio']},    
+    tipo: {type: String, required: [true, 'Tipo de usuario obligatorio']},    
     terminos: {type: Boolean, required: [true, 'terminos obligatorios']},
 });
 

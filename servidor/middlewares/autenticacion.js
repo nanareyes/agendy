@@ -3,7 +3,11 @@ const jwt = require('jsonwebtoken');
 let verificarAuth = (req, res, next) => {
 
   // Leer headers
-  let token = req.get('token');
+  let token;
+  if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
+    token = req.headers.authorization.split(' ')[1];
+  }
+  console.log('token', token);
 
   jwt.verify(token, 'secret', (err, decoded) => {
 
@@ -15,7 +19,7 @@ let verificarAuth = (req, res, next) => {
     }
 
     // Creamos una nueva propiedad con la info del usuario
-    req.cliente = decoded.data; //data viene al generar el token en login.js
+    req.user = decoded.data; //data viene al generar el token en login.js
     next();
 
   });

@@ -78,14 +78,14 @@
                         </div>
                         
                         <div class="campos-formulario">Tipo de usuario
-                            <select v-model="user.users">
-                                <option disabled value="user.users">Seleccione el tipo de usuario</option>
+                            <select v-model="user.tipo">
+                                <option disabled value="user.tipo">Seleccione el tipo de usuario</option>
                                 <option>Cliente</option>
                                 <option>Estilista</option>
                             </select>
-                            <div>
-                                <span>Seleccionado: {{ user.users }}</span>
-                            </div>
+                            <!-- <div>
+                                <span>Seleccionado: {{ user.tipo }}</span>
+                            </div> -->
                         </div>
                         <br>
                         <div class="campos-formulario form-group mb-3 text-start mx-3 ">
@@ -130,7 +130,7 @@ export default {
                 email: '',
                 password: '',
                 password2:'',
-                users: '',
+                tipo: '',
                 terminos:''
             },
     
