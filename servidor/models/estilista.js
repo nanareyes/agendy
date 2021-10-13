@@ -10,8 +10,8 @@ const estilistaSchema = new Schema({
     ciudad: {type: String, required: [true, 'Ciudad obligatorio']}, 
     departamento: {type: String, required: [true, 'Departamento obligatorio']}, 
     telefono: {type:Number, required:[true, 'teléfono requerido']},
-    correoElectronico: {type: String, required: [true, 'Email obligatorio']},
-    password: {type: Number, required: [true, 'Contraseña obligatoria']},
+    email: {type: String, required: [true, 'Email obligatorio']},
+    password: {type: String, required: [true, 'Contraseña obligatoria']},
     terminos: {type: Boolean, required: [true, 'terminos obligatorios']},
 });
 
