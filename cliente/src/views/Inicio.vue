@@ -5,7 +5,7 @@
                 Bienvenido a su página principal, {{datosUsuario.nombres}}
             </div>
             <div class="card-body navigations">
-
+                
                 <div class="row row-cols-1 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card h-100">
