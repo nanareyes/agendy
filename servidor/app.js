@@ -10,7 +10,6 @@ const app = express();
 const mongoose = require('mongoose');
 // const uri = 'mongodb://localhost:27017/agendyDB';
 const uri = 'mongodb+srv://AgendyDB:agendyDB@cluster0.9sfy7.mongodb.net/AgendyDB?retryWrites=true&w=majority';
-//mongodb+srv://AgendyDB:agendyDB@cluster0.gxjda.mongodb.net/AgendyDB?retryWrites=true&w=majority
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 
 // Or using promises
@@ -51,4 +50,3 @@ app.set('puerto', process.env.PORT || 3000);
 app.listen(app.get('puerto'), function () {
     console.log('Example app listening on port'+ app.get('puerto'));
 });
-
