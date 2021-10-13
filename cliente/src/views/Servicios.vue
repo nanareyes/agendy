@@ -13,7 +13,6 @@
                                 de larga duración, el cual puede ser aplicado en uñas naturales o artificiales.."
                         fullDescription="La manicura semipermanente es un maquillaje en uñas con esmaltado de larga
                         duración, el cual puede ser aplicado en uñas naturales, artificiales, de gel o acrílicas.
-
                         Ventajas: duración, brillo y salud de la uñas,dura hasta 14 días intacta, es fácil de quitar sin limar, con productos a base de acetona.
                         La única desventaja es que tendrás que llevar 14 días el mismo color."
                     />
@@ -24,7 +23,6 @@
                                 Es una forma artificial de extender tus uñas, agregar fuerza y grosor."
                         fullDescription="Las uñas acrílicas son una mezcla de polvo y monómero líquido que se combina en una masa, se da forma a las uñas con un cepillo y luego se seca al aire libre.
                                 Es una forma de extender las uñas, agregar fuerza, longitud y grosor.
-
                                 La manicura para uñas acrílicas se puede realizar mediante puntas o moldes las cuales se
                                 adhieren a la uña. Algunas de sus ventajas es que puedes reconstruir las uñas rotas y mordidas fácilmente para llevarlas siempre
                                 perfectas. Protege las uñas naturales de los efectos dañinos de los esmaltes y otros agentes, solo si lo
@@ -86,7 +84,6 @@
 
 <script>
 import Servicio from "@/components/Servicio.vue";
-
 export default {
     components: { Servicio },
     data(){
