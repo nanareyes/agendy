@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" @click="logout">  Logout </button> 
+                <button type="button" @click="logOut">  Salir </button> 
             </div>
         </div>
 
@@ -51,9 +51,12 @@ export default {
   name: "Inicio",
   data(){
     const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
-    return {
-      datosUsuario
+        return {
+            datosUsuario,
+      
     }
   }
-};
+  }
+
+
 </script>

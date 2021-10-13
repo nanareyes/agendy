@@ -29,7 +29,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <button type="button" @click="logout(salir)"> Salir</button> 
+                      <button type="button" @click="logOut"> Salir</button> 
                     </li>
                     
                   </ul>
@@ -101,23 +101,25 @@ export default {
 
     datosUsuario.logueado = logueado
     console.log('datos usuario en inicio', datosUsuario)
+    const logOut = async () =>  {
+      await localStorage.clear()
+      location.replace('/')
+      this.$router.push({ name: home })
+
+    }
     return {
       logueado,
-      datosUsuario
-
+      datosUsuario,
+      logOut
     }
 
   },
-  Methods: {
-    logout (){
-      const salir = localStorage.clear()
+    
 
-    {
-      this.$router.push({ name: home })
-    }
-  }  
   }
-}
+
+
+
 </script>
 
 <style scoped>
