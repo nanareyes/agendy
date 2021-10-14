@@ -5,7 +5,7 @@
                 Galería de Fotos
             </div>
             <div class="card-body section-body">
-                <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="row row-cols-1 row-cols-md-5 g-3 ms-5">
                     <div v-for="foto in fotos" class="col" :key="foto.id">
                         <FotoServicio :src="foto.src" :description="foto.description" />
                     </div>
@@ -39,17 +39,29 @@ export default {
         // }
         // Metodo 2. Ciclo
         // Se define el array donde se van a cargar las fotos
-        const fotos = [];
+        // const fotos = Array(1).fill(null).map((_, i) => {
+        //     const path = `../assets/images/decorado${i+1}.jpg`
+        //     return {
+        //         id: i+1,
+        //         src: require(path),
+        //         description: `Decorado de uñas ${i+1}`,
+        //     };
+        // });
+        // console.info('fotos', fotos)
+        const fotos = []
         // Ciclo que comienza en 1 y termina en 26
-        for (let i=1; i<= 26; i++) {
+        for (let i=1; i<=26; i++) {
             // Cada ingreso al ciclo, en el array adiciona un objeto
             // que contiene la ruta de la foto y la descripcion. Adicionalmente
             // se asigna un id para que sirva como key en el v-for
+            const nombre_archivo = `decorado${i}.jpg`
+            const images = require.context('@/assets/images/', false, /\.jpg$|\.png$/)  	    
             fotos.push({
                 id: i,
-                src: require(`@/assets/images/decorado${i}.jpg`),
+                src: images('./' + nombre_archivo),
                 description: `Decorado de uñas ${i}`,
             });
+            
         }
         // Se retorna el array de fotos para que pueda ser usado en el v-for
         return {

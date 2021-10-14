@@ -27,8 +27,6 @@
         </div>
         <div>
             <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
-        
-            <div><router-link to="/inicio" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Página de inicio de Sesion</router-link></div>
         </div>
     </div>
 
@@ -77,11 +75,12 @@ export default {
                                 localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
                                 // Del token se lee el tipo de usuario: Cliente o Estilista
                                 const tipo = datosToken.data.tipo
-                                if (tipo === 'Estilista') {
-                                    this.$router.push("/")
-                                } else {
-                                    this.$router.push("/servicios")
-                                }
+                                this.$router.push("portafolioServicios")
+                                // if (tipo === 'Estilista') {
+                                //     this.$router.push("/")
+                                // } else {
+                                //     this.$router.push("/")
+                                // }
                             }
                     });
                 } else {

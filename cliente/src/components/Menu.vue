@@ -1,10 +1,7 @@
 <template>
   <div id="banner">
     <div class="header" id="#Menu">
-
-      <div v-if="logueado">
-          <span><h2>Hola, {{datosUsuario.nombres}}</h2></span>
-              
+      <div v-if="logueado">              
         <div class="row menubar mb-3">
           <div class="col-6 menu-logo py-2">
             <img src="@/assets/images/LOGO 1.svg" />
@@ -76,7 +73,7 @@
     </div>
 
     <div class="container">
-      <h1 class="titulos">Bienvenidos a Agendy Nails</h1>
+      <h1 class="titulos"> Hola {{datosUsuario.nombres}}, Bienvenid@ a Agendy Nails</h1>
     </div>
   </div>
   </div>
@@ -86,9 +83,9 @@
 export default {
   name: "Menu",
   data(){
-    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
-    const token = localStorage.getItem('token')
-    const logueado = token!=null
+    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario')) || {}
+    const token = localStorage.getItem('token') || null
+    const logueado = token != null
     console.log(logueado)
 
     datosUsuario.logueado = logueado
