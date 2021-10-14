@@ -3,14 +3,16 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 
+
 const app = express();
 
 // Conexión base de datos
 const mongoose = require('mongoose');
-const uri = 'mongodb://localhost:27017/agendyDB';
 
+import { verificarAuth } from './middlewares/autenticacion';
 
-
+// const uri = 'mongodb://localhost:27017/agendyDB';
+const uri = 'mongodb+srv://AgendyDB:agendyDB@cluster0.9sfy7.mongodb.net/AgendyDB?retryWrites=true&w=majority';
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 
 // Or using promises
@@ -30,7 +32,11 @@ app.use(express.urlencoded({ extended: true }));
 // app.get('/', function (req, res) {
 //     res.send('Hello World!');
 // });
-app.use('/api', require('./routes/nota'));
+
+app.use('/api', require('./routes/servicio'));
+app.use('/api', require('./routes/user'));
+app.use('/api', verificarAuth, require('./routes/agenda'));
+app.use('/login', require('./routes/login'));
 
 
 // Middleware para Vue.js router modo history
