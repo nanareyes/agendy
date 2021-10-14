@@ -1,8 +1,8 @@
 <template>
   <div id="banner">
-    <div class="header" id="#menu">
+    <div class="header" id="#Menu">
 
-      <div  v-if="logueado">
+      <div v-if="logueado">
           <span><h2>Hola, {{datosUsuario.nombres}}</h2></span>
               
         <div class="row menubar mb-3">
@@ -15,14 +15,6 @@
               <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <router-link
-                        to="/"
-                        class="nav-link active mx-5"
-                        aria-current="page"
-                        >Inicio</router-link
-                      >
-                    </li>
                     <li class="nav-item">
                       <router-link to="/portafolioServicios" class="nav-link mx-4"
                         >Servicios</router-link

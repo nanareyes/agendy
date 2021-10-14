@@ -77,8 +77,8 @@ export default {
                                 localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
                                 // Del token se lee el tipo de usuario: Cliente o Estilista
                                 const tipo = datosToken.data.tipo
-                                if (tipo === 'Cliente') {
-                                    this.$router.push("/inicio")
+                                if (tipo === 'Estilista') {
+                                    this.$router.push("/")
                                 } else {
                                     this.$router.push("/servicios")
                                 }

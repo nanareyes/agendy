@@ -156,6 +156,7 @@ export default {
                             'Se ha resgistrado con el usuario ' + this.user.email,
                             'success'
                         )
+                        this.$router.push("/")
                     } else {
                         this.$swal.fire(
                             'user NO registrado',
@@ -165,6 +166,7 @@ export default {
                     }
                     let mensaje = response.data
                     console.log(mensaje)
+
                 })
             } else {
                 this.$swal.fire(

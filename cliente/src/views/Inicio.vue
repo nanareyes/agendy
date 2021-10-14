@@ -39,7 +39,6 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" @click="logOut">  Salir </button> 
             </div>
         </div>
 
@@ -49,14 +48,15 @@
 <script>
 export default {
   name: "Inicio",
+
   data(){
     const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
         return {
             datosUsuario,
       
     }
-  }
-  }
+  },
 
+}
 
 </script>
